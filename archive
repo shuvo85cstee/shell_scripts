@@ -1,0 +1,9 @@
+
+#!/bin/bash
+
+y=`date +%Y`
+w=`date +%W`
+
+ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null archive mkdir -p /var/www/html/archive/new/$y/$w
+scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r /var/www/html/new/* root@archive:/var/www/html/archive/new/$y/$w/
+ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null archive chown -R apache:apache /var/www/html/archive
