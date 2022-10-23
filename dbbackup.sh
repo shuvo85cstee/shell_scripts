@@ -2,8 +2,8 @@
 #mysql backup
 TIMESTAMP=$(date +"%F")
 BACKUP_DIR="/backup/$TIMESTAMP"
-MYSQL_USER="root"
-MYSQL_PASSWORD="se2121"
+MYSQL_USER="UserName"
+MYSQL_PASSWORD="xxxxx"
  
 mkdir -p "$BACKUP_DIR"
 
